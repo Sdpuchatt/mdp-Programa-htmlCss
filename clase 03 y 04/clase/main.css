@@ -1,0 +1,13 @@
+*{
+   
+}
+:root{
+    --font-title: 'sans-serif';
+
+    --color-primary: #cecece;
+    --color-secundary: #000;
+}
+
+.title{
+    color:var(--color-primary);
+}
