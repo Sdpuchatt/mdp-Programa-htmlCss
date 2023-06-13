@@ -1,0 +1,43 @@
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    display: grid;
+    background-color: antiquewhite;
+    font-size: 20px;
+    text-align: center;
+    height: 600px;
+    grid-template-areas: "menu menu menu"
+                         "two three four"
+                         "two five .";
+}
+.contenedor div{
+    border: solid 1px #000;
+    margin: 1px;
+}
+.contenedor .menu{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: aqua;
+}
+.contenedor .menu div{
+    display: inline-block;
+}
+.contenedor .menu div{
+    background-color: aliceblue;
+    max-width: 80%;
+}
+.menu{
+    grid-area: menu;
+}
+.two{
+    grid-area: two;
+}
+.three{
+    grid-area: three;
+}
+.four{
+    grid-area: four;
+}
+.five{
+    grid-area: five;
+}
