@@ -20,11 +20,7 @@
     background-color: aqua;
 }
 .contenedor .menu div{
-    display: inline-block;
-}
-.contenedor .menu div{
     background-color: aliceblue;
-    max-width: 80%;
 }
 .menu{
     grid-area: menu;
