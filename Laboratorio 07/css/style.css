@@ -8,7 +8,7 @@
     margin: 0 auto;
     display:flex;
     flex-direction: column;
-    background-color: rgb(233, 236, 40);
+    background-color: rgba(233, 236, 40, 0.468);
 }
 .menu{
     display: flex;
@@ -38,14 +38,83 @@
 main .contenedor-cards{
     display:grid;
 }
-main .contenedor-cards .card .imagen-precio{
+.contenedor-cards{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+.contenedor-cards .cardDoble{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.contenedor-cards .card{
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    display: grid;
+}
+.card .imagen-precio img{
+    width: 100%;
+    border-radius: 10px;
+}
+.card .imagen-precio{
     position: relative;
 }
-main .contenedor-cards .card .imagen-precio img{
-    max-width: 200px;
-}
-main .contenedor-cards .card .imagen-precio p{
+.card .imagen-precio p{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 0;
+    left: 0;
+}
+.card .descripcion p{
+    margin: 10px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(233, 236, 40, 0.593);
+    border-radius: 10px;
+   
+}
+.card button{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cardDoble{
+    position: relative;
+}
+.cardDoble button{
+    /* height: 5%; */
+    position: absolute;
+    width: 95%;
+    right: 3px;
+    bottom: 5px;
+    margin: 5px;
+}
+.card:hover{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.contenedor-img{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 0 auto;
+    padding: 10px;
+}
+.contenedor-img img{
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.contenedor-img img:hover{
+    opacity: 0.8;
+}
+.contenedor footer{
+    padding: 0 0 25px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
