@@ -1,0 +1,44 @@
+.contenedor{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "caja1 caja2"
+                         "caja3 caja3" ;
+    height: 800px;
+    
+}
+.contenedor2{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contenedor div{
+    margin: 5px;
+    background-color: brown;
+}
+.contenedor div p{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 40px;
+}
+.caja1{
+    grid-area: caja1;
+}
+.caja2{
+    grid-area: caja2;
+}
+.caja3{
+    grid-area: caja3;
+}
+.contenedor2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contenedor2 button{
+    margin: 5px;
+    padding: 10px;
+    font-size: 1.3rem;
+    border: none;
+    background-color: rgb(64, 64, 232);
+    color: white;
+}
