@@ -8,12 +8,18 @@
     <link rel="stylesheet" href="./staly.css">
 </head>
 <body>
-    <dvi class="contenedor">
-        <input type="text">
+    <div class="contenedor">
+        <h2>Lista de Elementos</h2>
+        <label for="entrada">Elemento a agregar:</label>
+        <input type="text" id="entrada" name="entrada">
         <button type="button" id="agregar">Agregar</button>
 
-        
-    </dvi>
+        <div class="contenedorLista">
+            <ul id="todoList">
+                <li>Primer elemento</li>
+            </ul>
+        </div>
+    </div>
 
 
     <script src="./main.js"></script>
