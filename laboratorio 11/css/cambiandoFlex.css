@@ -4,7 +4,7 @@
     display: grid;
     grid-template-areas: "caja1 caja2"
                          "caja3 caja3" ;
-    height: 800px;
+    height: 600px;
     
 }
 .contenedor2{
