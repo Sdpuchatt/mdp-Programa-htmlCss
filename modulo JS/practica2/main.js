@@ -60,16 +60,32 @@ switch(opcion){
         console.log("***********************");
         console.log("Quiere conocer la tabla de multiplicar de: ");
         let a = prompt();
-        tablaMultiplicar(a);
+        a = parseInt(a);
+
+        if(Number.isInteger(a)){
+            tablaMultiplicar(a);
+        }
+        else{
+            console.log("numero ingresado incorrecto")
+        }
+       
         console.log("***********************");
     }
     
     function opcion3(){
         console.log("***********************");
         let a =prompt("ingrese un numero para conocer la tabla de dividir: ");
-        tablaDividir(a);  
+        a = parseInt(a);
+
+        if(Number.isInteger(a)){
+            tablaDividir(a);  
+        }
+        else{
+            console.log("numero ingresado incorrecto");
+        }
         console.log("***********************");
     }
+
 
     function tablaDividir(a){
         let resultado = 0;
