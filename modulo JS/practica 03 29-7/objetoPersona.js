@@ -36,7 +36,7 @@ const forDataPerson = (elemento, indice, ) =>{
 dataPerson.forEach(forDataPerson);
 
 let nuevoDataPerson = dataPerson.filter((element)=>{
-    return element.fistName.includes("as");
+    return element.fistName.includes("AS");
 });
 
 console.table(nuevoDataPerson);
