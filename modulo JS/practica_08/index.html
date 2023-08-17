@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="form-control d-flex ">
+                <form action="" class="col-4" onsubmit="event.preventDefault();agregarCuadrado()" >
+                    <label for="nombre" class="form-label">Nombre y Apellido</label>
+                    <input type="text" id="nombre" class="form-control">
+
+                    <label for="fondo" class="form-label">Color de background</label>
+                    <input type="text" id="fondo" class="form-control" >
+
+                    <label for="colorLetra" class="form-label">Color de las letras</label>
+                    <input type="text" id="colorLetra" class="form-control">
+
+                    <label for="tamanoLetra" class="form-label">tamaño de las letras</label>
+                    <input type="text" id="tamanoLetra" class="form-control">
+                    <button type="submit" class="form-control btn btn-primary mt-2 mb-2">Agregar</button>
+                </form>
+
+                <div class="col-8 border border-primary mx-2 d-flex flex-row flex-wrap " id="contenedorCaja">
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
