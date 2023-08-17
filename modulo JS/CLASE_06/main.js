@@ -9,18 +9,11 @@ const addDataPersona = (firstName,lastName,birthday,address,status,dni,condition
         status
     }
     if(condition){
-        let contador = 0;
-        for(let i=0; i<dataPersona.length; i++){
-            if(parseInt(dataPersona?.dni) == parseInt(person.dni)){
-                contador ++;
-            }
-        }
-
-        if(contador == 0){
-            dataPersona.push(person);
-        }
+        dataPersona.push(person);
     }
-    
+    else{
+        dataPersona.unshift(person);
+    }
 
 }
 
@@ -32,7 +25,6 @@ const addFormPerson = () =>{
     let status = document.getElementById("status");
     let dni = document.getElementById("dni");
     console.log(firstName.value);
-    
     addDataPersona(firstName.value,lastName.value,birthday.value,address.value,status.value,dni.value);
     firstName.value ='';
     lastName.value='';

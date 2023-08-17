@@ -11,16 +11,7 @@ const addDataPersona = (firstName,lastName,birthday,address,status,condition) =>
         status
     }
     if(condition){
-        let contador = 0;
-        for(let i=0; i<dataPersona.length; i++){
-            if(dataPersona?.dni === this.dni){
-                contador ++;
-            }
-        }
-
-        if(contador === 0){
-            dataPersona.push(person);
-        }
+        dataPersona.push(person);
     }
     else{
         dataPersona.unshift(person);
@@ -107,4 +98,3 @@ dataFilter = dataPersona.filter( (person)=>{
  });
  
 console.table(dataFilter);
-
