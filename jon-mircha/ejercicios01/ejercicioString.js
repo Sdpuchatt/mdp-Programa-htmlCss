@@ -117,4 +117,3 @@ function eliminaPatronEnCadenaDeTexto(cadena, patron){
     return cadena;
 }
 console.log(eliminaPatronEnCadenaDeTexto("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"));
-
