@@ -3,6 +3,9 @@ import Persona from "./persona.js";
 let sergio = new Persona("sergio","puchatt",34500);
 let may = new Persona("may","berenice",34500);
 console.log(sergio);
+console.log(sergio.getApellido());
+sergio.setApellido("PUCHATT");
+console.log(sergio.getApellido());
 
 const contenidoPersona = document.getElementById("contenidoPersona");
 
