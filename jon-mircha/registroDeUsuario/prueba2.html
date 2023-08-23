@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro</title>
+    <style>
+        /* Estilos... */
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="register-container" style="display: none;">
+        <h2>Registro</h2>
+        <form id="register-form">
+            <input type="text" id="newUsername" placeholder="Username" required><br>
+            <input type="password" id="newPassword" placeholder="Password" required><br>
+            <button type="submit" >Registrar</button>
+        </form>
+    </div>
+
+    <script>
+        // Mostrar el formulario de registro al hacer clic en el botón
+        document.getElementById("show-register").addEventListener("click", function() {
+            document.getElementById("login-container").style.display = "none";
+            document.getElementById("register-container").style.display = "block";
+        });
+
+        // Mostrar el formulario de inicio de sesión al hacer clic en el botón
+        document.getElementById("show-login").addEventListener("click", function() {
+            document.getElementById("login-container").style.display = "block";
+            document.getElementById("register-container").style.display = "none";
+        });
+
+        // Iniciar sesión
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            var users = JSON.parse(localStorage.getItem("users")) || [];
+
+            var user = users.find(function(u) {
+                return u.username === username && u.password === password;
+            });
+
+            if (user) {
+                alert("Inicio de sesión exitoso");
+            } else {
+                alert("Credenciales incorrectas");
+            }
+        });
+
+        // Registrar usuario
+        document.getElementById("register-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var newUsername = document.getElementById("newUsername").value;
+            var newPassword = document.getElementById("newPassword").value;
+
+            var users = JSON.parse(localStorage.getItem("users")) || [];
+
+            users.push({ username: newUsername, password: newPassword });
+
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Usuario registrado exitosamente");
+        });
+    </script>
+</body>
+</html>

@@ -11,17 +11,32 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-6 mx-auto m-5">
+            <div class="col-6 mx-auto m-5 ">
                 <form action="">
                     <label for="usuario">Usuario</label>
-                    <input type="text" id="usuario" class="form-control">
+                    <input type="text" id="usuario" class="form-control" required>
+
                     <label for="contrasena">Contraseña</label>
-                    <input type="text" id="contrasena" class="form-control">
+                    <input type="text" id="contrasena" class="form-control" required>
+
                     <button type="submit" id="ingresar" class="col-3 btn btn-primary m-2">Ingresar</button>
                     <button type="submit" id="registrar" class="col-3 btn btn-primary m-2">Registrar</button>
                     
                 </form>
             </div>
+        </div>
+        <div class="row col-6 mx-auto m-5">
+            <table class="table-dark table table-striped table-bordered ">
+                <thead>
+                    <th>USUARIO</th>
+                    <th>CONTRASEÑA</th>
+                </thead>
+                <tbody id="listaUsuarios">
+                    <tr>
+                        <td class="text-center" colspan="2">NO HAY REGISTRO</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
